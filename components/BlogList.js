@@ -71,12 +71,12 @@ export default function BlogList() {
             Featured Articles
           </h2>          <div className="space-y-8">
             {featuredPosts.map((post, index) => (
-              <article key={index} className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6 hover:shadow-lg transition-all duration-200">
+              <article key={index} className="enhanced-project-card rounded-lg p-6 transition-all duration-200">
                 <div className="flex items-center space-x-4 mb-4">
-                  <span className="px-3 py-1 bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 rounded-full text-sm">
+                  <span className="contrast-skill-tag px-3 py-1 rounded-full text-sm">
                     {post.category}
                   </span>
-                  <span className="px-3 py-1 bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-300 rounded-full text-sm">
+                  <span className="contrast-skill-tag px-3 py-1 rounded-full text-sm">
                     {post.platform}
                   </span>
                 </div>
@@ -124,9 +124,9 @@ export default function BlogList() {
             More Articles
           </h2>          <div className="grid md:grid-cols-2 gap-6">
             {otherPosts.map((post, index) => (
-              <article key={index} className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6 hover:shadow-lg transition-all duration-200">
+              <article key={index} className="enhanced-project-card rounded-lg p-6 transition-all duration-200">
                 <div className="mb-3">
-                  <span className="px-3 py-1 bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300 rounded-full text-sm">
+                  <span className="contrast-skill-tag px-3 py-1 rounded-full text-sm">
                     {post.category}
                   </span>
                 </div>
@@ -162,7 +162,7 @@ export default function BlogList() {
           </div>
         </div>
       )}      {/* Newsletter Signup */}
-      <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-8 text-center">
+      <div className="contrast-card rounded-lg p-8 text-center">
         <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
           Stay Updated
         </h3>
@@ -173,14 +173,14 @@ export default function BlogList() {
           <Link 
             href="https://chandanmalakar.medium.com/"
             target="_blank"
-            className="elegant-button"
+            className="social-button"
           >
             Follow on Medium
           </Link>
           <Link 
             href="https://delve-deeper.hashnode.dev/"
             target="_blank"
-            className="elegant-button bg-white/10 hover:bg-white/20 text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-600"
+            className="social-button bg-transparent hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-600"
           >
             Follow on Hashnode
           </Link>

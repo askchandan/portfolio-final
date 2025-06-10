@@ -63,7 +63,7 @@ export default function ProjectsPage() {
               Featured Projects
             </h2>            <div className="grid md:grid-cols-2 gap-8">
               {featuredProjects.map((project, index) => (
-                <div key={index} className="project-card rounded-xl overflow-hidden">
+                <div key={index} className="enhanced-project-card rounded-xl overflow-hidden">
                   <div className="p-6">
                     <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                       {project.title}
@@ -77,7 +77,7 @@ export default function ProjectsPage() {
                       {project.technologies.map((tech, techIndex) => (
                         <span 
                           key={techIndex}
-                          className="skill-tag primary"
+                          className="contrast-skill-tag"
                         >
                           {tech}
                         </span>
@@ -116,7 +116,7 @@ export default function ProjectsPage() {
                 Research & Articles
               </h2>              <div className="grid md:grid-cols-2 gap-6">
                 {otherProjects.map((project, index) => (
-                  <div key={index} className="project-card rounded-xl p-6">
+                  <div key={index} className="enhanced-project-card rounded-xl p-6">
                     <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                       {project.title}
                     </h3>
@@ -129,12 +129,12 @@ export default function ProjectsPage() {
                       {project.technologies.map((tech, techIndex) => (
                         <span 
                           key={techIndex}
-                          className="skill-tag"
+                          className="contrast-skill-tag"
                         >
                           {tech}
                         </span>
                       ))}
-                    </div>                    <Link 
+                    </div><Link 
                       href={project.liveUrl}
                       target="_blank"
                       className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors text-sm"
@@ -150,9 +150,8 @@ export default function ProjectsPage() {
           <div className="mb-12">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
               Technology Stack
-            </h2>
-            
-            <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl p-8 border border-gray-200 dark:border-gray-700">
+            </h2>            
+            <div className="contrast-card rounded-2xl p-8 border border-gray-200 dark:border-gray-700">
               <div className="flex flex-wrap justify-center gap-3">
                 {[
                   { name: 'Python', color: 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300' },
@@ -187,11 +186,10 @@ export default function ProjectsPage() {
               Want to see more of my work?
             </h3>
             <p className="text-gray-600 dark:text-gray-400 mb-6">
-              Check out my GitHub profile for more projects and contributions to the open-source community.            </p>
-            <Link 
+              Check out my GitHub profile for more projects and contributions to the open-source community.            </p>            <Link 
               href="https://github.com/askchandan"
               target="_blank"
-              className="inline-flex items-center space-x-2 bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-100 text-white dark:text-gray-900 px-6 py-3 rounded-xl hover:from-gray-800 hover:to-gray-600 dark:hover:from-gray-100 dark:hover:to-gray-200 transition-all duration-300 hover:scale-105 hover:shadow-xl social-hover"
+              className="social-button inline-flex items-center space-x-2 px-6 py-3 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-xl"
             >
               <span role="img" aria-label="GitHub">💻</span>
               <span>Visit GitHub Profile</span>

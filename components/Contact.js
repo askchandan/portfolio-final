@@ -232,17 +232,17 @@ export default function Contact() {
                     className="elegant-input resize-none"
                     placeholder="Share your thoughts, project ideas, or collaboration opportunities..."
                   />
-                </div>                <div className="pt-4">
-                  <div className="flex justify-center">
+                </div>                <div className="pt-2">
+                  <div className="flex justify-center w-full">
                     <button
                       type="submit"
-                      className="elegant-button px-16 py-3 min-w-[280px]"
+                      className="elegant-button px-6 py-2 flex items-center justify-center gap-2 text-sm"
                     >
-                      <Send size={20} />
+                      <Send size={16} />
                       <span>Send Message</span>
                     </button>
                   </div>
-                    <p className="text-sm text-gray-500 dark:text-gray-400 text-center mt-3">
+                  <p className="text-sm text-gray-500 dark:text-gray-400 text-center mt-3">
                     This will open Gmail compose in a new tab with the message pre-filled.
                   </p>
                 </div>

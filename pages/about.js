@@ -21,7 +21,7 @@ export default function AboutPage() {
             </p>
           </div>          {/* Background Cards */}
           <div className="grid md:grid-cols-3 gap-6 mb-12">
-            <div className="light-card p-6 rounded-xl card-hover-subtle">
+            <div className="contrast-card p-6 rounded-xl">
               <div className="text-3xl text-vibrant-blue mb-4">🎓</div>
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Education</h3>
               <p className="text-gray-600 dark:text-gray-400 text-sm">
@@ -30,7 +30,7 @@ export default function AboutPage() {
               <p className="text-gray-500 dark:text-gray-500 text-xs mt-1">2022 - Present</p>
             </div>
 
-            <div className="light-card p-6 rounded-xl card-hover-subtle">
+            <div className="contrast-card p-6 rounded-xl">
               <div className="text-3xl text-vibrant-purple mb-4">🏢</div>
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Current Role</h3>
               <p className="text-gray-600 dark:text-gray-400 text-sm">
@@ -39,7 +39,7 @@ export default function AboutPage() {
               <p className="text-gray-500 dark:text-gray-500 text-xs mt-1">2025 - Present</p>
             </div>
 
-            <div className="light-card p-6 rounded-xl card-hover-subtle">
+            <div className="contrast-card p-6 rounded-xl">
               <div className="text-3xl text-vibrant-pink mb-4">📍</div>
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Location</h3>
               <p className="text-gray-600 dark:text-gray-400 text-sm">
@@ -52,9 +52,8 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
               Skills & Technologies
             </h2>
-            
-            {/* Programming & ML Skills */}
-            <div className="skill-category">
+              {/* Programming & ML Skills */}
+            <div className="enhanced-skill-category">
               <div className="flex items-center mb-6">
                 <div className="p-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl mr-4 category-icon">
                   <div className="text-xl text-white">💻</div>
@@ -63,43 +62,41 @@ export default function AboutPage() {
               </div>
               
               <div className="flex flex-wrap gap-2">
-                <span className="skill-tag primary">
+                <span className="contrast-skill-tag">
                   <span>🐍</span>
                   <span className="ml-2">Python</span>
                 </span>
-                <span className="skill-tag secondary">
+                <span className="contrast-skill-tag">
                   <span>🤖</span>
                   <span className="ml-2">Machine Learning</span>
                 </span>
-                <span className="skill-tag accent">
+                <span className="contrast-skill-tag">
                   <span>🧠</span>
                   <span className="ml-2">TensorFlow</span>
                 </span>
-                <span className="skill-tag success">
+                <span className="contrast-skill-tag">
                   <span>📊</span>
                   <span className="ml-2">Scikit-learn</span>
                 </span>
-                <span className="skill-tag">
+                <span className="contrast-skill-tag">
                   <span>🐼</span>
                   <span className="ml-2">Pandas & NumPy</span>
                 </span>
-                <span className="skill-tag">
+                <span className="contrast-skill-tag">
                   <span>📈</span>
                   <span className="ml-2">Data Science</span>
                 </span>
-                <span className="skill-tag">
+                <span className="contrast-skill-tag">
                   <span>🚀</span>
                   <span className="ml-2">Streamlit</span>
                 </span>
-                <span className="skill-tag">
+                <span className="contrast-skill-tag">
                   <span>📓</span>
                   <span className="ml-2">Jupyter Notebooks</span>
                 </span>
               </div>
-            </div>
-
-            {/* Data & Analytics Skills */}
-            <div className="skill-category">
+            </div>            {/* Data & Analytics Skills */}
+            <div className="enhanced-skill-category">
               <div className="flex items-center mb-6">
                 <div className="p-3 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-xl mr-4 category-icon">
                   <div className="text-xl text-white">📊</div>
@@ -108,42 +105,42 @@ export default function AboutPage() {
               </div>
               
               <div className="flex flex-wrap gap-2">
-                <span className="skill-tag primary">
+                <span className="contrast-skill-tag">
                   <span>🗄️</span>
                   <span className="ml-2">SQL</span>
                 </span>
-                <span className="skill-tag secondary">
+                <span className="contrast-skill-tag">
                   <span>📊</span>
                   <span className="ml-2">Statistics</span>
                 </span>
-                <span className="skill-tag accent">
+                <span className="contrast-skill-tag">
                   <span>📈</span>
                   <span className="ml-2">Data Visualization</span>
                 </span>
-                <span className="skill-tag success">
+                <span className="contrast-skill-tag">
                   <span>🚀</span>
                   <span className="ml-2">Model Deployment</span>
                 </span>
-                <span className="skill-tag">
+                <span className="contrast-skill-tag">
                   <span>🔤</span>
                   <span className="ml-2">NLP</span>
                 </span>
-                <span className="skill-tag">
+                <span className="contrast-skill-tag">
                   <span>🔧</span>
                   <span className="ml-2">Data Preprocessing</span>
                 </span>
-                <span className="skill-tag">
+                <span className="contrast-skill-tag">
                   <span>⚙️</span>
                   <span className="ml-2">ML Pipelines</span>
                 </span>
-                <span className="skill-tag">
+                <span className="contrast-skill-tag">
                   <span>📐</span>
                   <span className="ml-2">Statistical Analysis</span>
                 </span>
               </div>
             </div>
           </div>          {/* Personal Interests */}
-          <div className="light-card gradient-bg-light p-8 rounded-2xl card-hover-subtle">
+          <div className="contrast-card gradient-bg-light p-8 rounded-2xl">
             <div className="flex items-center mb-4">
               <span className="text-vibrant-pink mr-2">❤️</span>
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white">What Drives Me</h3>

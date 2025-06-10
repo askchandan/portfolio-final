@@ -38,32 +38,30 @@ export default function HeroComplete() {
               <span>Currently at UNIDIF Consulting</span>
             </div>
           </div>
-          
-          {/* Current Status */}
-          <div className="inline-block elegant-card px-6 py-3 mb-8">
+            {/* Current Status */}
+          <div className="inline-block stats-card px-6 py-3 mb-8">
             <span className="text-indigo-700 dark:text-indigo-300 text-sm font-medium">
               📊 Data Analyst Intern at UNIDIF Consulting (2025)
             </span>
           </div>
-        </div>
-          {/* Enhanced Stats with elegant styling */}
+        </div>        {/* Enhanced Stats with elegant styling */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-          <div className="text-center elegant-card p-6">
+          <div className="text-center stats-card p-6">
             <div className="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent mb-2">2+</div>
             <div className="text-sm text-gray-600 dark:text-gray-400 font-medium">Years Experience</div>
             <div className="text-xs text-gray-500 dark:text-gray-500 mt-1">Data Analytics</div>
           </div>
-          <div className="text-center elegant-card p-6">
+          <div className="text-center stats-card p-6">
             <div className="text-3xl font-bold bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent mb-2">10+</div>
             <div className="text-sm text-gray-600 dark:text-gray-400 font-medium">Projects</div>
             <div className="text-xs text-gray-500 dark:text-gray-500 mt-1">ML & Data Science</div>
           </div>
-          <div className="text-center elegant-card p-6">
+          <div className="text-center stats-card p-6">
             <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-2">5+</div>
             <div className="text-sm text-gray-600 dark:text-gray-400 font-medium">Blog Posts</div>
             <div className="text-xs text-gray-500 dark:text-gray-500 mt-1">Technical Writing</div>
           </div>
-          <div className="text-center elegant-card p-6">
+          <div className="text-center stats-card p-6">
             <div className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent mb-2">∞</div>
             <div className="text-sm text-gray-600 dark:text-gray-400 font-medium">Learning</div>
             <div className="text-xs text-gray-500 dark:text-gray-500 mt-1">Continuous Growth</div>
@@ -85,12 +83,11 @@ export default function HeroComplete() {
         <div className="mb-16">
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">
             Featured Projects
-          </h2>
-          <div className="grid md:grid-cols-2 gap-6">
+          </h2>          <div className="grid md:grid-cols-2 gap-6">
             <Link 
               href="https://chandan-laptop-price-prediction.streamlit.app/"
               target="_blank"
-              className="group block elegant-card p-6"
+              className="group block enhanced-project-card p-6"
             >
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-indigo-600 dark:group-hover:text-indigo-400">
                 Laptop Price Prediction
@@ -99,15 +96,15 @@ export default function HeroComplete() {
                 ML model to predict laptop prices using various features. Built with Python, Streamlit, and scikit-learn for consumer decision support.
               </p>
               <div className="flex flex-wrap gap-2">
-                <span className="skill-tag primary">Python</span>
-                <span className="skill-tag secondary">Streamlit</span>
-                <span className="skill-tag accent">ML</span>
+                <span className="contrast-skill-tag">Python</span>
+                <span className="contrast-skill-tag">Streamlit</span>
+                <span className="contrast-skill-tag">ML</span>
               </div>
             </Link>
             <Link 
               href="https://chandan-twitter-sentiment-analysis.streamlit.app/"
               target="_blank"
-              className="group block elegant-card p-6"
+              className="group block enhanced-project-card p-6"
             >
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-indigo-600 dark:group-hover:text-indigo-400">
                 Twitter Sentiment Analysis
@@ -116,9 +113,9 @@ export default function HeroComplete() {
                 NLP application for real-time sentiment analysis with interactive visualization dashboard and comprehensive text processing.
               </p>
               <div className="flex flex-wrap gap-2">
-                <span className="skill-tag primary">Python</span>
-                <span className="skill-tag secondary">NLP</span>
-                <span className="skill-tag accent">NLTK</span>
+                <span className="contrast-skill-tag">Python</span>
+                <span className="contrast-skill-tag">NLP</span>
+                <span className="contrast-skill-tag">NLTK</span>
               </div>
             </Link>
           </div>
@@ -127,12 +124,11 @@ export default function HeroComplete() {
         <div className="mb-16">
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">
             Latest Blog Posts
-          </h2>
-          <div className="grid md:grid-cols-2 gap-6">
+          </h2>          <div className="grid md:grid-cols-2 gap-6">
             <Link 
               href="https://chandanmalakar.medium.com/seaborn-stories-of-imagination-and-visualization-1e4953174f24"
               target="_blank"
-              className="group block elegant-card p-6"
+              className="group block enhanced-project-card p-6"
             >
               <div className="flex items-center mb-3">
                 <span role="img" aria-label="Book" className="w-5 h-5 text-indigo-600 dark:text-indigo-400 mr-2">📚</span>
@@ -148,7 +144,7 @@ export default function HeroComplete() {
             <Link 
               href="https://delve-deeper.hashnode.dev/limitless-farming"
               target="_blank"
-              className="group block elegant-card p-6"
+              className="group block enhanced-project-card p-6"
             >
               <div className="flex items-center mb-3">
                 <span role="img" aria-label="Book" className="w-5 h-5 text-violet-600 dark:text-violet-400 mr-2">📚</span>
@@ -203,20 +199,17 @@ export default function HeroComplete() {
               <span>Instagram</span>
             </Link>
           </div>
-        </div>
-
-        {/* Call to Action */}
+        </div>        {/* Call to Action */}
         <div className="text-center mt-12">
-          <div className="space-x-4">
-            <Link 
+          <div className="space-x-4">            <Link 
               href="/resume"
-              className="elegant-button"
+              className="bright-pink-button"
             >
               View Resume
             </Link>
             <Link 
               href="/contact"
-              className="elegant-button secondary"
+              className="bright-pink-button"
             >
               Get in Touch
             </Link>
