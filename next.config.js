@@ -1,15 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
   output: 'export',
   trailingSlash: true,
   images: {
-    unoptimized: true, // Required for static export
+    unoptimized: true,
   },
-  // Performance optimizations
   poweredByHeader: false,
-  compress: true,
+  // Minimal experimental config to avoid issues
+  experimental: {
+    // Disable potentially problematic optimizations
+    optimizePackageImports: [],
+  },
 }
 
 module.exports = nextConfig
