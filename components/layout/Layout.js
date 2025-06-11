@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react'
 import Link from 'next/link'
 import { useTheme } from 'next-themes'
-import { SunMedium, Moon, Menu, X } from './Icons'
+import { SunMedium, Moon, Menu, X } from '../Icons'
 
 export default function Layout({ children }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
