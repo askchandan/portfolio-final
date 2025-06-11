@@ -173,7 +173,7 @@ export default function AboutPage() {
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white">What Drives Me</h3>
             </div>
             <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-              I'm passionate about using data to solve real-world problems and make a positive impact. Whether it's predicting laptop prices to help consumers make informed decisions or analyzing sentiment to understand public opinion, I love working on projects that have practical applications. I believe in the power of continuous learning and am always excited to explore new technologies and methodologies in the ever-evolving field of AI and data science.
+              Every dataset tells a story waiting to be discovered, and I believe that data science is the key to unlocking solutions that can transform industries and improve lives. What truly excites me is the endless possibility of turning raw numbers into meaningful insights that drive innovation. From optimizing manufacturing processes to predicting market trends, I'm driven by the vision that every algorithm we build today becomes the foundation for tomorrow's breakthroughs. The journey of a data science aspirant isn't just about mastering Python or SQL—it's about developing the curiosity to ask the right questions, the persistence to dig deeper into complex problems, and the creativity to find patterns where others see chaos. This field constantly challenges me to grow, learn, and push the boundaries of what's possible with data.
             </p>
           </div>
 

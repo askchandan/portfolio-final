@@ -8,17 +8,13 @@
   }
     body {
     -webkit-overflow-scrolling: touch;
-    overflow-x: hidden;
-  }
-
-  /* Ultra-fast page transitions with hardware acceleration */
+    overflow-x: hidden;  }
+  /* Minimal sleek page transitions - no bulb effect */
   .page-transition {
     will-change: opacity;
-    transform: translateZ(0);
     backface-visibility: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    transform-style: preserve-3d;
   }
 
   /* Royal white and pink sophisticated background */

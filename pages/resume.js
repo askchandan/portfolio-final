@@ -61,16 +61,22 @@ export default function ResumePage() {
           {/* Work Experience */}
           <div className="mb-12">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Work Experience</h2>
-            <div className="border-l-2 border-gray-200 pl-6">
-              <div className="mb-8">
+            <div className="border-l-2 border-gray-200 pl-6">              <div className="mb-8">
                 <div className="flex items-center mb-2">
                   <div className="w-3 h-3 bg-blue-600 rounded-full -ml-8 mr-3"></div>
                   <h3 className="text-lg font-semibold">Data Analyst Intern</h3>
                 </div>
                 <p className="text-blue-600 font-medium">UNIDIF Consulting • 2025 - Present</p>
-                <p className="text-gray-600 dark:text-gray-400 mt-2">
-                  Working on-site as a Data Analyst intern, developing data science solutions and implementing analytics models for real-world business problems. Gaining hands-on experience in data processing, statistical analysis, visualization, and working with cross-functional teams.
-                </p>
+                <div className="text-gray-600 dark:text-gray-400 mt-2">
+                  <ul className="list-disc list-inside space-y-2">
+                    <li>Analyzed manufacturing production data using Python, NumPy, and Pandas to identify process inefficiencies and optimize production workflows</li>
+                    <li>Performed correlation analysis and statistical modeling to determine relationships between manufacturing variables and quality metrics</li>
+                    <li>Created comprehensive data visualizations with Seaborn and Matplotlib to present manufacturing trends and performance insights to management</li>
+                    <li>Developed SQL queries to extract and analyze production data from manufacturing databases, identifying bottlenecks and improvement opportunities</li>
+                    <li>Built automated reporting systems using Google Sheets and Excel to track KPIs, production metrics, and quality control measures</li>
+                    <li>Conducted root cause analysis on manufacturing defects and downtime events, providing data-driven recommendations for process improvements</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -133,10 +139,9 @@ export default function ResumePage() {
           {/* Skills */}
           <div className="mb-12">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Technical Skills</h2>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div>
+            <div className="grid md:grid-cols-3 gap-6">              <div>
                 <h3 className="text-lg font-semibold mb-3">Programming Languages</h3>                <div className="flex flex-wrap gap-2">
-                  {['Python', 'SQL', 'R'].map(skill => (
+                  {['Python', 'SQL', 'Java', 'C++'].map(skill => (
                     <span key={skill} className="contrast-skill-tag px-3 py-1 rounded-full text-sm transition-all duration-200 hover:scale-105 hover:shadow-md cursor-default">
                       {skill}
                     </span>

@@ -7,23 +7,23 @@ import { useRouter } from 'next/router'
 
 const inter = Inter({ subsets: ['latin'] })
 
-// Fast and ultra smooth fade transition without theme flashing
+// Minimal sleek fade transition - clean and aesthetic
 const pageVariants = {
   initial: {
-    opacity: 0
+    opacity: 0.85
   },
   in: {
     opacity: 1
   },
   out: {
-    opacity: 0
+    opacity: 0.85
   }
 }
 
 const pageTransition = {
   type: "tween",
-  ease: "easeInOut", // Simple smooth easing for fastest performance
-  duration: 0.2 // Fast transition for seamless navigation
+  ease: "easeInOut",
+  duration: 0.12 // Ultra fast and sleek
 }
 
 export default function App({ Component, pageProps }) {
@@ -36,8 +36,7 @@ export default function App({ Component, pageProps }) {
         <link rel="preload" as="image" href="/my-photo2.jpg" />
       </Head>
       <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange={true}>        <div className={inter.className}>
-          <AnimatePresence mode="wait" initial={false} onExitComplete={() => window.scrollTo(0, 0)}>
-            <motion.div
+          <AnimatePresence mode="wait" initial={false} onExitComplete={() => window.scrollTo(0, 0)}>            <motion.div
               key={router.asPath}
               initial="initial"
               animate="in"
@@ -47,7 +46,6 @@ export default function App({ Component, pageProps }) {
               className="min-h-screen page-transition"
               style={{
                 willChange: 'opacity',
-                transform: 'translateZ(0)',
               }}
             >
               <Component {...pageProps} />
