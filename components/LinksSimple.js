@@ -1,5 +1,6 @@
 // filepath: c:\Users\Chandan Malakar\Downloads\chandanmalakar.live\chandanmalakar.live\prakashpun.me\components\LinksSimple.js
 import Link from 'next/link'
+import Image from 'next/image'
 import { 
   Users, 
   Github, 
@@ -102,10 +103,18 @@ export default function Links() {  const links = [
   return (
     <div className="max-w-2xl mx-auto px-4 py-16">
       <div className="text-center mb-12">        <div className="mb-6">
-          <img
-            src="/my-photo2.jpg?v=1&t=20250611155000"
+          <Image
+            src="/my-photo2.jpg"
             alt="Chandan Malakar"
             className="w-24 h-24 rounded-full mx-auto border-4 border-gray-200 dark:border-gray-700 object-cover"
+            width={96}
+            height={96}
+            priority={false}
+            quality={90}
+            loading="lazy"
+            sizes="96px"
+            placeholder="blur"
+            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R+Kts="
           />
         </div>
         <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">

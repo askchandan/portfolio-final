@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { 
   MapPin, 
   Calendar, 
@@ -28,18 +29,19 @@ export default function HeroComplete() {
     <div className="relative overflow-hidden">
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
         {/* Hero Section */}
-        <div className="text-center mb-16">          <div className="mb-8">
-            <div className="relative inline-block profile-image-container">              <img
+        <div className="text-center mb-16">          <div className="mb-8">            <div className="relative inline-block profile-image-container">
+              <Image
                 src="/my-photo.jpg?v=5&t=20250611155000"
                 alt="Chandan Malakar"
                 className="w-48 h-48 rounded-full mx-auto mb-6 object-cover shadow-2xl ring-4 ring-white dark:ring-gray-800 ring-offset-4 ring-offset-blue-50 dark:ring-offset-gray-900 relative z-10"
+                width={192}
+                height={192}
+                priority={true}
+                quality={90}
                 loading="eager"
-                priority="true"
-                width="192"
-                height="192"
-                style={{ aspectRatio: '1/1' }}
-                decoding="async"
-                fetchpriority="high"
+                sizes="192px"
+                placeholder="blur"
+                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R+Kts="
               />
             </div>
           </div>
