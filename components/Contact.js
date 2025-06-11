@@ -19,21 +19,48 @@ export default function Contact() {
     subject: '',
     message: ''
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState(null)
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     })
   }
-  
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // Create Gmail compose URL with form data
-    const { name, email, subject, message } = formData
-    const gmailComposeUrl = `https://mail.google.com/mail/?view=cm&to=chandanmalakar6209@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
-    )}`
-    window.open(gmailComposeUrl, '_blank')
+    setIsSubmitting(true)
+    setSubmitStatus(null)
+    
+    try {
+      const response = await fetch('https://formspree.io/f/xblyorjv', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          _replyto: formData.email,
+          _subject: `Portfolio Contact: ${formData.subject}`,
+        }),
+      })
+      
+      if (response.ok) {
+        setSubmitStatus('success')
+        setFormData({ name: '', email: '', subject: '', message: '' })
+      } else {
+        setSubmitStatus('error')
+      }
+    } catch (error) {
+      console.error('Error sending email:', error)
+      setSubmitStatus('error')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const socialLinks = [
@@ -71,9 +98,10 @@ export default function Contact() {
       icon: ExternalLink,
       color: 'hover:text-green-600 dark:hover:text-green-400',
       description: 'Read my technical articles and insights'
-    },
-    {
-      name: 'Hashnode',      href: 'https://delve-deeper.hashnode.dev/',      icon: ExternalLink,
+    },    {
+      name: 'Hashnode',
+      href: 'https://delve-deeper.hashnode.dev/',
+      icon: ExternalLink,
       color: 'hover:text-blue-500 dark:hover:text-blue-300',
       description: 'Explore my development blog'
     }
@@ -233,17 +261,33 @@ export default function Contact() {
                     placeholder="Share your thoughts, project ideas, or collaboration opportunities..."
                   />
                 </div>                <div className="pt-2">
+                  {/* Status Messages */}
+                  {submitStatus === 'success' && (
+                    <div className="mb-4 p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg">                      <p className="text-green-700 dark:text-green-300 text-sm text-center">
+                        ✅ Message sent successfully! I'll get back to you soon.
+                      </p>
+                    </div>
+                  )}
+                  
+                  {submitStatus === 'error' && (
+                    <div className="mb-4 p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg">
+                      <p className="text-red-700 dark:text-red-300 text-sm text-center">
+                        ❌ Failed to send message. Please try again or contact me directly.
+                      </p>
+                    </div>
+                  )}
+                  
                   <div className="flex justify-center w-full">
                     <button
                       type="submit"
-                      className="elegant-button px-6 py-2 flex items-center justify-center gap-2 text-sm"
+                      disabled={isSubmitting}
+                      className="elegant-button px-6 py-2 flex items-center justify-center gap-2 text-sm disabled:opacity-50 disabled:cursor-not-allowed"
                     >
-                      <Send size={16} />
-                      <span>Send Message</span>
+                      <Send size={16} className={isSubmitting ? 'animate-pulse' : ''} />
+                      <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
                     </button>
-                  </div>
-                  <p className="text-sm text-gray-500 dark:text-gray-400 text-center mt-3">
-                    This will open Gmail compose in a new tab with the message pre-filled.
+                  </div>                  <p className="text-sm text-gray-500 dark:text-gray-400 text-center mt-3">
+                    Your message will be sent directly to my email.
                   </p>
                 </div>
               </form>
