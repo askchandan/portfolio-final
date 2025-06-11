@@ -1,5 +1,28 @@
 import Head from 'next/head'
 import StandardLayout from '../components/StandardLayout'
+import { 
+  GraduationCap, 
+  Building, 
+  MapPin, 
+  Code, 
+  Database, 
+  BarChart3, 
+  Bot, 
+  Settings, 
+  Wrench, 
+  Target, 
+  Heart,
+  Laptop,
+  BrainCircuit,
+  TrendingUp,
+  Layers,
+  Rocket,
+  BookOpenCheck,
+  Zap,
+  Activity,
+  Beaker,
+  Clipboard
+} from '../components/Icons'
 
 
 export default function AboutPage() {
@@ -22,7 +45,9 @@ export default function AboutPage() {
           </div>          {/* Background Cards */}
           <div className="grid md:grid-cols-3 gap-6 mb-12">
             <div className="contrast-card p-6 rounded-xl">
-              <div className="text-3xl text-vibrant-blue mb-4">🎓</div>
+              <div className="mb-4">
+                <GraduationCap size={32} className="text-vibrant-blue" />
+              </div>
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Education</h3>
               <p className="text-gray-600 dark:text-gray-400 text-sm">
                 BE in Computer Science and Engineering
@@ -31,7 +56,9 @@ export default function AboutPage() {
             </div>
 
             <div className="contrast-card p-6 rounded-xl">
-              <div className="text-3xl text-vibrant-purple mb-4">🏢</div>
+              <div className="mb-4">
+                <Building size={32} className="text-vibrant-purple" />
+              </div>
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Current Role</h3>
               <p className="text-gray-600 dark:text-gray-400 text-sm">
                 Data Analyst Intern at UNIDIF Consulting
@@ -40,7 +67,9 @@ export default function AboutPage() {
             </div>
 
             <div className="contrast-card p-6 rounded-xl">
-              <div className="text-3xl text-vibrant-pink mb-4">📍</div>
+              <div className="mb-4">
+                <MapPin size={32} className="text-vibrant-pink" />
+              </div>
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Location</h3>
               <p className="text-gray-600 dark:text-gray-400 text-sm">
                 From Jamshedpur, Jharkhand
@@ -51,47 +80,46 @@ export default function AboutPage() {
           <div className="mb-12">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
               Skills & Technologies
-            </h2>
-              {/* Programming & ML Skills */}
+            </h2>              {/* Programming & ML Skills */}
             <div className="enhanced-skill-category">
               <div className="flex items-center mb-6">
                 <div className="p-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl mr-4 category-icon">
-                  <div className="text-xl text-white">💻</div>
+                  <Laptop size={20} className="text-white" />
                 </div>
                 <h3 className="text-xl font-bold">Programming & Machine Learning</h3>
               </div>
               
               <div className="flex flex-wrap gap-2">
                 <span className="contrast-skill-tag">
-                  <span>🐍</span>
+                  <Code size={16} />
                   <span className="ml-2">Python</span>
                 </span>
                 <span className="contrast-skill-tag">
-                  <span>🤖</span>
+                  <Bot size={16} />
                   <span className="ml-2">Machine Learning</span>
                 </span>
                 <span className="contrast-skill-tag">
-                  <span>🧠</span>
+                  <BrainCircuit size={16} />
                   <span className="ml-2">TensorFlow</span>
                 </span>
                 <span className="contrast-skill-tag">
-                  <span>📊</span>
+                  <BarChart3 size={16} />
                   <span className="ml-2">Scikit-learn</span>
                 </span>
                 <span className="contrast-skill-tag">
-                  <span>🐼</span>
+                  <Layers size={16} />
                   <span className="ml-2">Pandas & NumPy</span>
                 </span>
                 <span className="contrast-skill-tag">
-                  <span>📈</span>
+                  <TrendingUp size={16} />
                   <span className="ml-2">Data Science</span>
                 </span>
                 <span className="contrast-skill-tag">
-                  <span>🚀</span>
+                  <Rocket size={16} />
                   <span className="ml-2">Streamlit</span>
                 </span>
                 <span className="contrast-skill-tag">
-                  <span>📓</span>
+                  <BookOpenCheck size={16} />
                   <span className="ml-2">Jupyter Notebooks</span>
                 </span>
               </div>
@@ -99,42 +127,41 @@ export default function AboutPage() {
             <div className="enhanced-skill-category">
               <div className="flex items-center mb-6">
                 <div className="p-3 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-xl mr-4 category-icon">
-                  <div className="text-xl text-white">📊</div>
+                  <BarChart3 size={20} className="text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Data Analytics & Tools</h3>
               </div>
               
               <div className="flex flex-wrap gap-2">
                 <span className="contrast-skill-tag">
-                  <span>🗄️</span>
+                  <Database size={16} />
                   <span className="ml-2">SQL</span>
                 </span>
                 <span className="contrast-skill-tag">
-                  <span>📊</span>
+                  <BarChart3 size={16} />
                   <span className="ml-2">Statistics</span>
                 </span>
                 <span className="contrast-skill-tag">
-                  <span>📈</span>
+                  <TrendingUp size={16} />
                   <span className="ml-2">Data Visualization</span>
                 </span>
                 <span className="contrast-skill-tag">
-                  <span>🚀</span>
+                  <Rocket size={16} />
                   <span className="ml-2">Model Deployment</span>
-                </span>
-                <span className="contrast-skill-tag">
-                  <span>🔤</span>
+                </span>                <span className="contrast-skill-tag">
+                  <Zap size={16} />
                   <span className="ml-2">NLP</span>
                 </span>
                 <span className="contrast-skill-tag">
-                  <span>🔧</span>
+                  <Wrench size={16} />
                   <span className="ml-2">Data Preprocessing</span>
                 </span>
                 <span className="contrast-skill-tag">
-                  <span>⚙️</span>
+                  <Settings size={16} />
                   <span className="ml-2">ML Pipelines</span>
                 </span>
                 <span className="contrast-skill-tag">
-                  <span>📐</span>
+                  <Activity size={16} />
                   <span className="ml-2">Statistical Analysis</span>
                 </span>
               </div>
@@ -142,7 +169,7 @@ export default function AboutPage() {
           </div>          {/* Personal Interests */}
           <div className="contrast-card gradient-bg-light p-8 rounded-2xl">
             <div className="flex items-center mb-4">
-              <span className="text-vibrant-pink mr-2">❤️</span>
+              <Heart size={20} className="text-vibrant-pink mr-2" />
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white">What Drives Me</h3>
             </div>
             <p className="text-gray-600 dark:text-gray-400 leading-relaxed">

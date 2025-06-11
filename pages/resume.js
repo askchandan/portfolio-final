@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import StandardLayout from '../components/StandardLayout'
 import Link from 'next/link'
+import { Download, ExternalLink } from '../components/Icons'
 
 export default function ResumePage() {
   return (
@@ -29,7 +30,8 @@ export default function ResumePage() {
                 download="Chandan_Malakar_Resume.pdf"
                 className="social-button inline-flex items-center px-6 py-3 rounded-lg transition-all duration-200 hover:scale-105 hover:shadow-lg"
               >
-                📄 Download Resume
+                <Download size={16} className="mr-2" />
+                Download Resume
               </a>
             </div>
           </div>
@@ -96,15 +98,15 @@ export default function ResumePage() {
                 <h3 className="text-lg font-semibold mb-2">Laptop Price Prediction</h3>
                 <p className="text-gray-600 dark:text-gray-400 mb-4">
                   A comprehensive machine learning model that predicts laptop prices based on various features like brand, specifications, and performance metrics. Built using Python, scikit-learn, and deployed with Streamlit.
-                </p>
-                <div className="flex space-x-4">
+                </p>                <div className="flex space-x-4">
                   <a 
                     href="https://chandan-laptop-price-prediction.streamlit.app/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
                   >
-                    🔗 Live Demo
+                    <ExternalLink size={16} className="mr-1" />
+                    Live Demo
                   </a>
                 </div>
               </div>
@@ -113,15 +115,15 @@ export default function ResumePage() {
                 <h3 className="text-lg font-semibold mb-2">Twitter Sentiment Analysis</h3>
                 <p className="text-gray-600 dark:text-gray-400 mb-4">
                   A natural language processing application that analyzes sentiment in real-time Twitter data. Uses NLTK and TextBlob for text preprocessing and sentiment classification, with an interactive dashboard.
-                </p>
-                <div className="flex space-x-4">
+                </p>                <div className="flex space-x-4">
                   <a 
                     href="https://chandan-twitter-sentiment-analysis.streamlit.app/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
                   >
-                    🔗 Live Demo
+                    <ExternalLink size={16} className="mr-1" />
+                    Live Demo
                   </a>
                 </div>
               </div>

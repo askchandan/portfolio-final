@@ -1,5 +1,22 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import { 
+  MapPin, 
+  Calendar, 
+  BarChart3, 
+  Bot, 
+  TrendingUp, 
+  Database, 
+  Globe, 
+  Code, 
+  BookOpen, 
+  Github, 
+  Users, 
+  Twitter, 
+  Camera, 
+  ExternalLink,
+  Zap
+} from './Icons'
 
 export default function HeroComplete() {
   const [mounted, setMounted] = useState(false)
@@ -33,19 +50,22 @@ export default function HeroComplete() {
             Data Science Aspirant & Machine Learning Engineer
           </p>          <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-sm text-gray-500 dark:text-gray-400 mb-8">
             <div className="flex items-center space-x-1">
-              <span role="img" aria-label="Location" className="inline-block w-4 h-4">📍</span>
+              <MapPin size={16} />
               <span className="text-center sm:text-left">Jamshedpur, Jharkhand → Chennai, Tamil Nadu</span>
             </div>
             <div className="flex items-center space-x-1">
-              <span role="img" aria-label="Calendar" className="inline-block w-4 h-4">📅</span>
+              <Calendar size={16} />
               <span className="text-center sm:text-left">Currently at UNIDIF Consulting</span>
             </div>
           </div>
             {/* Current Status */}
           <div className="inline-block stats-card px-6 py-3 mb-8">
-            <span className="text-indigo-700 dark:text-indigo-300 text-sm font-medium">
-              📊 Data Analyst Intern at UNIDIF Consulting (2025)
-            </span>
+            <div className="flex items-center space-x-2">
+              <BarChart3 size={16} className="text-indigo-700 dark:text-indigo-300" />
+              <span className="text-indigo-700 dark:text-indigo-300 text-sm font-medium">
+                Data Analyst Intern at UNIDIF Consulting (2025)
+              </span>
+            </div>
           </div>
         </div>        {/* Enhanced Stats with elegant styling */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
@@ -63,9 +83,8 @@ export default function HeroComplete() {
             <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">5+</div>
             <div className="text-sm text-gray-700 dark:text-gray-300 font-medium">Blog Posts</div>
             <div className="text-xs text-gray-600 dark:text-gray-400 mt-1">Technical Writing</div>
-          </div>
-          <div className="text-center stats-card p-6">
-            <div className="text-3xl font-bold text-purple-600 dark:text-purple-400 mb-2">∞</div>
+          </div>          <div className="text-center stats-card p-6">
+            <Zap size={32} className="text-purple-600 dark:text-purple-400 mx-auto mb-2" />
             <div className="text-sm text-gray-700 dark:text-gray-300 font-medium">Learning</div>
             <div className="text-xs text-gray-600 dark:text-gray-400 mt-1">Continuous Growth</div>
           </div>
@@ -74,12 +93,30 @@ export default function HeroComplete() {
         {/* Skills Highlight */}
         <div className="text-center mb-16">
           <div className="inline-flex flex-wrap justify-center gap-2">
-            <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm">🐍 Python</span>
-            <span className="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded-full text-sm">🤖 Machine Learning</span>
-            <span className="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded-full text-sm">📊 Data Analytics</span>
-            <span className="px-3 py-1 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 rounded-full text-sm">📈 Tableau</span>
-            <span className="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full text-sm">🗄️ SQL</span>
-            <span className="px-3 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300 rounded-full text-sm">📊 Power BI</span>
+            <span className="skill-tag-with-icon px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm">
+              <Code size={14} className="inline mr-1" />
+              Python
+            </span>
+            <span className="skill-tag-with-icon px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded-full text-sm">
+              <Bot size={14} className="inline mr-1" />
+              Machine Learning
+            </span>
+            <span className="skill-tag-with-icon px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded-full text-sm">
+              <BarChart3 size={14} className="inline mr-1" />
+              Data Analytics
+            </span>
+            <span className="skill-tag-with-icon px-3 py-1 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 rounded-full text-sm">
+              <TrendingUp size={14} className="inline mr-1" />
+              Tableau
+            </span>
+            <span className="skill-tag-with-icon px-3 py-1 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full text-sm">
+              <Database size={14} className="inline mr-1" />
+              SQL
+            </span>
+            <span className="skill-tag-with-icon px-3 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300 rounded-full text-sm">
+              <BarChart3 size={14} className="inline mr-1" />
+              Power BI
+            </span>
           </div>
         </div>
           {/* Featured Projects Preview */}
@@ -131,10 +168,9 @@ export default function HeroComplete() {
             <Link 
               href="https://chandanmalakar.medium.com/seaborn-stories-of-imagination-and-visualization-1e4953174f24"
               target="_blank"
-              className="group block enhanced-project-card p-6"
-            >
+              className="group block enhanced-project-card p-6"            >
               <div className="flex items-center mb-3">
-                <span role="img" aria-label="Book" className="w-5 h-5 text-indigo-600 dark:text-indigo-400 mr-2">📚</span>
+                <BookOpen size={16} className="text-indigo-600 dark:text-indigo-400 mr-2" />
                 <span className="text-sm text-gray-500 dark:text-gray-400">Medium</span>
               </div>
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-indigo-600 dark:group-hover:text-indigo-400">
@@ -150,7 +186,7 @@ export default function HeroComplete() {
               className="group block enhanced-project-card p-6"
             >
               <div className="flex items-center mb-3">
-                <span role="img" aria-label="Book" className="w-5 h-5 text-violet-600 dark:text-violet-400 mr-2">📚</span>
+                <BookOpen size={16} className="text-violet-600 dark:text-violet-400 mr-2" />
                 <span className="text-sm text-gray-500 dark:text-gray-400">Hashnode</span>
               </div>
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-violet-600 dark:group-hover:text-violet-400">
@@ -165,14 +201,13 @@ export default function HeroComplete() {
         <div className="text-center mb-16">
           <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-6">
             Let's Connect
-          </h2>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 max-w-lg mx-auto">
+          </h2>          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 max-w-lg mx-auto">
             <Link 
               href="https://github.com/askchandan" 
               target="_blank"
               className="responsive-social-link"
             >
-              <span role="img" aria-label="GitHub" className="text-lg sm:text-xl">💻</span>
+              <Github size={20} />
               <span className="text-xs sm:text-sm font-medium">GitHub</span>
             </Link>
             <Link 
@@ -180,7 +215,7 @@ export default function HeroComplete() {
               target="_blank"
               className="responsive-social-link"
             >
-              <span role="img" aria-label="LinkedIn" className="text-lg sm:text-xl">👨‍💼</span>
+              <Users size={20} />
               <span className="text-xs sm:text-sm font-medium">LinkedIn</span>
             </Link>
             <Link 
@@ -188,7 +223,7 @@ export default function HeroComplete() {
               target="_blank"
               className="responsive-social-link"
             >
-              <span role="img" aria-label="Twitter" className="text-lg sm:text-xl">🐦</span>
+              <Twitter size={20} />
               <span className="text-xs sm:text-sm font-medium">Twitter</span>
             </Link>
             <Link 
@@ -196,7 +231,7 @@ export default function HeroComplete() {
               target="_blank"
               className="responsive-social-link"
             >
-              <span role="img" aria-label="Instagram" className="text-lg sm:text-xl">📸</span>
+              <Camera size={20} />
               <span className="text-xs sm:text-sm font-medium">Instagram</span>
             </Link>
           </div>

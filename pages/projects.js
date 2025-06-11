@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import StandardLayout from '../components/StandardLayout'
 import Link from 'next/link'
+import { ExternalLink, Github } from '../components/Icons'
 
 export default function ProjectsPage() {
   const projects = [
@@ -82,15 +83,13 @@ export default function ProjectsPage() {
                           {tech}
                         </span>
                       ))}
-                    </div>
-
-                    {/* Links */}
+                    </div>                    {/* Links */}
                     <div className="flex space-x-4">                      <Link 
                         href={project.liveUrl}
                         target="_blank"
                         className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
                       >
-                        <span role="img" aria-label="External Link">🔗</span>
+                        <ExternalLink size={16} />
                         <span>Live Demo</span>
                       </Link>
                       {project.githubUrl !== "#" && (
@@ -98,7 +97,7 @@ export default function ProjectsPage() {
                           href={project.githubUrl}
                           target="_blank"
                           className="flex items-center space-x-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
-                        >                          <span role="img" aria-label="Code">💻</span>
+                        >                          <Github size={16} />
                           <span>Code</span>
                         </Link>
                       )}
@@ -134,12 +133,12 @@ export default function ProjectsPage() {
                           {tech}
                         </span>
                       ))}
-                    </div><Link 
+                    </div>                    <Link 
                       href={project.liveUrl}
                       target="_blank"
                       className="flex items-center space-x-2 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors text-sm"
                     >
-                      <span role="img" aria-label="External Link">🔗</span>
+                      <ExternalLink size={16} />
                       <span>Read Article</span>
                     </Link>
                   </div>
@@ -191,7 +190,7 @@ export default function ProjectsPage() {
               target="_blank"
               className="social-button inline-flex items-center space-x-2 px-6 py-3 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-xl"
             >
-              <span role="img" aria-label="GitHub">💻</span>
+              <Github size={20} />
               <span>Visit GitHub Profile</span>
             </Link>
           </div>
