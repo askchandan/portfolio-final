@@ -31,7 +31,7 @@ export default function HeroComplete() {
         {/* Hero Section */}
         <div className="text-center mb-16">          <div className="mb-8">            <div className="relative inline-block profile-image-container">
               <Image
-                src="/my-photo.jpg?v=5&t=20250611155000"
+                src="/my-photo.jpg?v=6&t=20250611200000"
                 alt="Chandan Malakar"
                 className="w-48 h-48 rounded-full mx-auto mb-6 object-cover shadow-2xl ring-4 ring-white dark:ring-gray-800 ring-offset-4 ring-offset-blue-50 dark:ring-offset-gray-900 relative z-10"
                 width={192}

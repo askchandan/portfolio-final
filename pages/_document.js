@@ -3,7 +3,7 @@ import { Html, Head, Main, NextScript } from 'next/document'
 export default function Document() {
   return (
     <Html lang="en">      <Head>        <meta charSet="utf-8" />        {/* Performance optimizations */}
-        <link rel="preload" href="/my-photo.jpg?v=5&t=20250611155000" as="image" type="image/jpeg" />
+        <link rel="preload" href="/my-photo.jpg?v=6&t=20250611200000" as="image" type="image/jpeg" />
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         

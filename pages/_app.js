@@ -32,7 +32,7 @@ export default function App({ Component, pageProps }) {
   return (
     <>      <Head>        <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* Optimized image preloading for better performance */}
-        <link rel="preload" as="image" href="/my-photo.jpg?v=5&t=20250611155000" />
+        <link rel="preload" as="image" href="/my-photo.jpg?v=6&t=20250611200000" />
         <link rel="preload" as="image" href="/my-photo2.jpg" />
       </Head>
       <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange={true}>        <div className={inter.className}>
