@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { useTheme } from 'next-themes'
 import { SunMedium, Moon, Menu, X } from './Icons'
 
-export default function StandardLayout({ children }) {
+export default function Layout({ children }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [mounted, setMounted] = useState(false)
   const { theme, setTheme } = useTheme()

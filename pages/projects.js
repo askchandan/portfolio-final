@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import StandardLayout from '../components/StandardLayout'
+import Layout from '../components/Layout'
 import Link from 'next/link'
 import { ExternalLink, Github } from '../components/Icons'
 
@@ -43,11 +43,10 @@ export default function ProjectsPage() {
   const otherProjects = projects.filter(project => !project.featured);
 
   return (
-    <>
-      <Head>
+    <>      <Head>
         <title>Projects - Chandan Malakar</title>
         <meta name="description" content="Explore Chandan Malakar's data science and machine learning projects including laptop price prediction and sentiment analysis." />      </Head>
-      <StandardLayout>
+      <Layout>
         <div className="max-w-6xl mx-auto px-4 py-12">
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
@@ -193,9 +192,8 @@ export default function ProjectsPage() {
               <Github size={20} />
               <span>Visit GitHub Profile</span>
             </Link>
-          </div>
-        </div>
-      </StandardLayout>
+          </div>        </div>
+      </Layout>
     </>
   )
 }

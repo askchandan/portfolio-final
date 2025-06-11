@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { useRouter } from 'next/router'
-import StandardLayout from '../../components/StandardLayout'
+import Layout from '../../components/Layout'
 import BlogPost from '../../components/BlogPost'
 
 export default function BlogPostPage() {
@@ -8,14 +8,13 @@ export default function BlogPostPage() {
   const { slug } = router.query
 
   return (
-    <>
-      <Head>
+    <>      <Head>
         <title>Blog Post - Chandan Malakar</title>
         <meta name="description" content="Read this blog post by Chandan Malakar." />
       </Head>
-      <StandardLayout>
+      <Layout>
         <BlogPost slug={slug} />
-      </StandardLayout>
+      </Layout>
     </>
   )
 }

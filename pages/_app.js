@@ -34,8 +34,8 @@ export default function App({ Component, pageProps }) {
         {/* Optimized image preloading for better performance */}
         <link rel="preload" as="image" href="/my-photo.jpg?v=6&t=20250611200000" />
         <link rel="preload" as="image" href="/my-photo2.jpg" />
-      </Head>
-      <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange={true}>        <div className={inter.className}>
+      </Head>      <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange={true}>
+        <div className={inter.className}>
           <AnimatePresence mode="wait" initial={false} onExitComplete={() => window.scrollTo(0, 0)}>            <motion.div
               key={router.asPath}
               initial="initial"

@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import StandardLayout from '../components/StandardLayout'
+import Layout from '../components/Layout'
 import Contact from '../components/Contact'
 
 export default function ContactPage() {
@@ -9,9 +9,9 @@ export default function ContactPage() {
         <title>Contact - Chandan Malakar</title>
         <meta name="description" content="Get in touch with Chandan Malakar for collaboration opportunities." />
       </Head>
-      <StandardLayout>
+      <Layout>
         <Contact />
-      </StandardLayout>
+      </Layout>
     </>
   )
 }

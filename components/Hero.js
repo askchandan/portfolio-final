@@ -19,7 +19,7 @@ import {
   Zap
 } from './Icons'
 
-export default function HeroComplete() {
+export default function Hero() {
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {

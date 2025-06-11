@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import StandardLayout from '../components/StandardLayout'
+import Layout from '../components/Layout'
 import { 
   GraduationCap, 
   Building, 
@@ -32,7 +32,7 @@ export default function AboutPage() {
         <title>About - Chandan Malakar</title>
         <meta name="description" content="Learn more about Chandan Malakar, Data Science Aspirant and Machine Learning Engineer from Jamshedpur, Jharkhand." />
       </Head>
-      <StandardLayout>
+      <Layout>
         <div className="max-w-4xl mx-auto px-4 py-12">
           {/* Header Section */}
           <div className="text-center mb-12">
@@ -186,7 +186,7 @@ export default function AboutPage() {
               My goal is to become a skilled data scientist who can bridge the gap between complex data and actionable insights. I'm committed to continuous learning, contributing to open-source projects, and eventually working on AI solutions that can make a meaningful difference in people's lives.
             </p>
           </div>        </div>
-      </StandardLayout>
+      </Layout>
     </>
   )
 }

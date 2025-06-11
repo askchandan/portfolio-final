@@ -1,6 +1,6 @@
 import Head from 'next/head'
-import StandardLayout from '../components/StandardLayout'
-import Links from '../components/LinksSimple'
+import Layout from '../components/Layout'
+import Links from '../components/Links'
 
 export default function LinksPage() {
   return (
@@ -9,9 +9,9 @@ export default function LinksPage() {
         <title>Links - Chandan Malakar</title>
         <meta name="description" content="Important links and resources from Chandan Malakar." />
       </Head>
-      <StandardLayout>
+      <Layout>
         <Links />
-      </StandardLayout>
+      </Layout>
     </>
   )
 }

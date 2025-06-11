@@ -1,4 +1,3 @@
-// filepath: c:\Users\Chandan Malakar\Downloads\chandanmalakar.live\chandanmalakar.live\prakashpun.me\components\LinksSimple.js
 import Link from 'next/link'
 import Image from 'next/image'
 import { 

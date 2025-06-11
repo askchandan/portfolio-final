@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import StandardLayout from '../components/StandardLayout'
+import Layout from '../components/Layout'
 import Link from 'next/link'
 import { Download, ExternalLink } from '../components/Icons'
 
@@ -10,7 +10,7 @@ export default function ResumePage() {
         <title>Resume - Chandan Malakar</title>
         <meta name="description" content="View Chandan Malakar's professional experience and skills in Data Science and Machine Learning." />
       </Head>
-      <StandardLayout>
+      <Layout>
         <div className="max-w-4xl mx-auto px-4 py-12">
           {/* Header */}
           <div className="text-center mb-12">
@@ -202,10 +202,9 @@ export default function ResumePage() {
                 >
                   Read on Hashnode →
                 </a>
-              </div>
-            </div></div>
+              </div>            </div></div>
         </div>
-      </StandardLayout>
+      </Layout>
     </>
   )
 }

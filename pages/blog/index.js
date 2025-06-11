@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import StandardLayout from '../../components/StandardLayout'
+import Layout from '../../components/Layout'
 import BlogList from '../../components/BlogList'
 
 export default function BlogPage() {
@@ -7,11 +7,10 @@ export default function BlogPage() {
     <>
       <Head>
         <title>Blog - Chandan Malakar</title>
-        <meta name="description" content="Read articles and insights from Chandan Malakar on data science, machine learning, and technology." />
-      </Head>
-      <StandardLayout>
+        <meta name="description" content="Read articles and insights from Chandan Malakar on data science, machine learning, and technology." />      </Head>
+      <Layout>
         <BlogList />
-      </StandardLayout>
+      </Layout>
     </>
   )
 }
