@@ -2,8 +2,17 @@ import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {
   return (
-    <Html lang="en">      <Head>
-        <meta charSet="utf-8" />
+    <Html lang="en">      <Head>        <meta charSet="utf-8" />        {/* Performance optimizations */}
+        <link rel="preload" href="/my-photo.jpg?v=5&t=20250611155000" as="image" type="image/jpeg" />
+        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        
+        {/* Critical rendering path optimization */}
+        <meta name="color-scheme" content="light dark" />
+        <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+        <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
+        
+        {/* Favicon configuration */}
         <link rel="icon" href="/favicon.ico?v=2" />
         <link rel="shortcut icon" href="/favicon.ico?v=2" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=2" />

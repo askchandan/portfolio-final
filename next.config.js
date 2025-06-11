@@ -7,10 +7,11 @@ const nextConfig = {
     unoptimized: true,
   },
   poweredByHeader: false,
-  // Minimal experimental config to avoid issues
-  experimental: {
-    // Disable potentially problematic optimizations
-    optimizePackageImports: [],
+  // Performance optimizations
+  compress: true,
+  generateEtags: false,
+  httpAgentOptions: {
+    keepAlive: true,
   },
 }
 

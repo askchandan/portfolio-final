@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate Circular Favicon</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        canvas {
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        button {
+            background: #4f46e5;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px 5px;
+        }
+        button:hover {
+            background: #4338ca;
+        }
+        #preview {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .favicon-preview {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px;
+            background: #f9f9f9;
+            border-radius: 8px;
+        }
+        .size-label {
+            font-size: 12px;
+            color: #666;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Generate Circular Favicon from Your Photo</h1>
+        <p>This tool will create circular favicons in multiple sizes from your photo.</p>
+        
+        <input type="file" id="imageInput" accept="image/*" style="margin: 20px 0;">
+        
+        <div id="canvasContainer"></div>
+        
+        <div id="controls" style="display: none;">
+            <button onclick="downloadFavicon(16)">Download 16x16 favicon</button>
+            <button onclick="downloadFavicon(32)">Download 32x32 favicon</button>
+            <button onclick="downloadFavicon(180)">Download 180x180 (Apple)</button>
+            <button onclick="downloadAll()">Download All Sizes</button>
+        </div>
+        
+        <div id="preview"></div>
+        
+        <div id="instructions" style="margin-top: 30px; padding: 20px; background: #f0f8ff; border-radius: 8px;">
+            <h3>Instructions:</h3>
+            <ol>
+                <li>Select your photo file above</li>
+                <li>Download the generated favicon files</li>
+                <li>Replace the files in your public folder</li>
+                <li>Update your _document.js file with the new favicon links</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        const imageInput = document.getElementById('imageInput');
+        const canvasContainer = document.getElementById('canvasContainer');
+        const controls = document.getElementById('controls');
+        const preview = document.getElementById('preview');
+        
+        let originalImage = null;
+        
+        imageInput.addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    originalImage = new Image();
+                    originalImage.onload = function() {
+                        generatePreviews();
+                        controls.style.display = 'block';
+                    };
+                    originalImage.src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+        
+        function generatePreviews() {
+            preview.innerHTML = '';
+            const sizes = [16, 32, 180];
+            
+            sizes.forEach(size => {
+                const canvas = createCircularFavicon(size);
+                const container = document.createElement('div');
+                container.className = 'favicon-preview';
+                
+                const label = document.createElement('div');
+                label.textContent = `${size}x${size}px`;
+                label.className = 'size-label';
+                
+                container.appendChild(canvas);
+                container.appendChild(label);
+                preview.appendChild(container);
+            });
+        }
+        
+        function createCircularFavicon(size) {
+            const canvas = document.createElement('canvas');
+            canvas.width = size;
+            canvas.height = size;
+            const ctx = canvas.getContext('2d');
+            
+            // Create circular clipping path
+            ctx.beginPath();
+            ctx.arc(size/2, size/2, size/2, 0, Math.PI * 2);
+            ctx.clip();
+            
+            // Draw image to fill the circle
+            const minDimension = Math.min(originalImage.width, originalImage.height);
+            const sx = (originalImage.width - minDimension) / 2;
+            const sy = (originalImage.height - minDimension) / 2;
+            
+            ctx.drawImage(originalImage, sx, sy, minDimension, minDimension, 0, 0, size, size);
+            
+            return canvas;
+        }
+        
+        function downloadFavicon(size) {
+            const canvas = createCircularFavicon(size);
+            const link = document.createElement('a');
+            
+            if (size === 16) {
+                link.download = 'favicon-16x16.png';
+            } else if (size === 32) {
+                link.download = 'favicon-32x32.png';
+            } else if (size === 180) {
+                link.download = 'apple-touch-icon.png';
+            }
+            
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }
+        
+        function downloadAll() {
+            setTimeout(() => downloadFavicon(16), 100);
+            setTimeout(() => downloadFavicon(32), 300);
+            setTimeout(() => downloadFavicon(180), 500);
+        }
+    </script>
+</body>
+</html>

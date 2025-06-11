@@ -88,10 +88,9 @@ export default function Links() {
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-16">
-      <div className="text-center mb-12">
-        <div className="mb-6">
+      <div className="text-center mb-12">        <div className="mb-6">
           <img
-            src="/my-photo.jpg"
+            src="/my-photo2.jpg?v=1&t=20250611155000"
             alt="Chandan Malakar"
             className="w-24 h-24 rounded-full mx-auto border-4 border-gray-200 dark:border-gray-700 object-cover"
           />
